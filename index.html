@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RespiraLibre - Calculadora de Nicotina</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🌿 RespiraLibre</h1>
+    <p>Calcula cuánto tarda tu cuerpo en eliminar la nicotina y cómo acelerar tu recuperación.</p>
+  </header>
+
+  <main class="app-container">
+    <div class="card">
+      <h2>🩺 Calculadora de Desintoxicación</h2>
+
+      <div class="form-group">
+        <label for="cigarrillos">Cigarrillos fumados hoy:</label>
+        <input type="number" id="cigarrillos" placeholder="Ej: 10" min="0" />
+      </div>
+
+      <div class="form-group">
+        <label for="agua">¿Cuántos vasos de agua tomaste hoy?</label>
+        <input type="number" id="agua" placeholder="Ej: 5" min="0" />
+      </div>
+
+      <div class="form-group">
+        <label for="actividad">Nivel de actividad física:</label>
+        <select id="actividad">
+          <option value="bajo">Bajo</option>
+          <option value="medio">Medio</option>
+          <option value="alto">Alto</option>
+        </select>
+      </div>
+
+      <button onclick="calcular()">Calcular</button>
+    </div>
+
+    <div id="resultado" class="resultado oculto">
+      <h2>Resultado</h2>
+      <p id="mensaje"></p>
+
+      <div id="recomendaciones" class="recomendaciones">
+        <h3>🌱 Recomendaciones para limpiar tu cuerpo</h3>
+        <ul id="tips"></ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 RespiraLibre - Vive sin humo 💚</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

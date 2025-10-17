@@ -1,0 +1,152 @@
+:root {
+  --verde: #16a34a;
+  --verde-claro: #22c55e;
+  --blanco: #ffffff;
+  --gris: #f1f5f9;
+  --sombra: rgba(0, 0, 0, 0.1);
+  --texto: #1e293b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--gris);
+  color: var(--texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+  background: linear-gradient(135deg, var(--verde), var(--verde-claro));
+  color: var(--blanco);
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.card {
+  background: var(--blanco);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px var(--sombra);
+  padding: 25px;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--verde);
+}
+
+button {
+  background: var(--verde);
+  color: var(--blanco);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--verde-claro);
+}
+
+.resultado {
+  margin-top: 30px;
+  background: var(--blanco);
+  border-radius: 20px;
+  box-shadow: 0 6px 15px var(--sombra);
+  padding: 20px;
+  max-width: 450px;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.resultado.oculto {
+  display: none;
+}
+
+.recomendaciones {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.recomendaciones h3 {
+  color: var(--verde);
+  margin-bottom: 10px;
+}
+
+.recomendaciones ul {
+  list-style: none;
+}
+
+.recomendaciones li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
